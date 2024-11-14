@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cámaras de Seguridad</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .camera-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .camera-item {
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .price-list {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cámaras de Seguridad</h1>
+    </header>
+    <div class="container">
+        <p>Explora nuestra selección de cámaras de seguridad y descubre sus precios.</p>
+        
+        <h2>Modelos Disponibles</h2>
+        <ul class="camera-list">
+            <li class="camera-item">Cámara IP 1080p</li>
+            <li class="camera-item">Cámara de Seguridad Inalámbrica</li>
+            <li class="camera-item">Cámara de Vigilancia Exterior</li>
+            <li class="camera-item">Cámara de Seguridad con Visión Nocturna</li>
+        </ul>
+
+        <button onclick="showPrices()">Ver Precios</button>
+
+        <div class="price-list" id="priceList">
+            <h3>Precios de Cámaras</h3>
+            <ul>
+                <li>Cámara IP 1080p: $99.99</li>
+                <li>Cámara de Seguridad Inalámbrica: $129.99</li>
+                <li>Cámara de Vigilancia Exterior: $149.99</li>
+                <li>Cámara de Seguridad con Visión Nocturna: $89.99</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function showPrices() {
+            var priceList = document.getElementById("priceList");
+            if (priceList.style.display === "none" || priceList.style.display === "") {
+                priceList.style.display = "block";
+            } else {
+                priceList.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
